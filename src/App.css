@@ -1,38 +1,181 @@
-.App {
+body{
+  margin: 0;
+  background-color: rgb(82, 102, 120);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  /* Variables */
+  --start-background: white;
+  --background-answer: white;
+  --background-answer-selected: rgb(132, 135, 225);
+  --background-checkAnswer: rgb(0, 0, 107);
+  --color-checkAnswer: white;
+  
+}
+
+.start{
+  background-color: var(--start-background);
+  text-align: center;
+  width: 95vw;
+  margin: 8vh auto;
+  font-size: 55px;
+  padding-bottom: 25px;
+  border-radius: 15px;
+  max-width: 90rem;
+}
+
+.start-tittle{
+  margin: -2rem;
+}
+
+.img--main{
+  height: 15rem;
+}
+
+.button--start{
+  background-color: aqua;
+  padding: 0;
+  width: fit-content;
+  cursor: pointer;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.started{
+  background-color: var(--start-background);
+  width: 80vw;
+  margin: 1.5rem auto;
+  padding: 5vw;
+  font-size: 25px;
+  border-radius: 15px;
+}
+
+.easy{
+  color: green;
+}
+
+.medium{
+  color: orange;
+}
+
+.hard{
+  color: red;
+}
+
+.category{
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  margin-bottom: 1rem;
+}
+
+.category > h4{
+  margin-right: 20px;
+}
+
+.category--img{
+  height: 3rem;
+}
+
+.answers{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 20px;
+  margin: 0 auto;
+}
+
+.answer{
+  border: 1px solid gray;
+  background-color: var(--background-answer);
+  text-align: center;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.answer-selected{
+  background-color: var(--background-answer-selected);
+  text-align: center;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.good--answer{
+  border: 1px solid rgb(32, 56, 16);
+  background-color: rgb(71, 244, 48);
+  text-align: center;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.bad--answer{
+  border: 1px solid gray;
+  background-color: rgb(182, 69, 69);
+  color: gray;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.none--answer{
+  border: 1px solid rgba(128, 128, 128, 0.726);
+  background-color: white;
+  color: gray;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.checkAnswers{
+  background-color: var(--background-checkAnswer);
+  color: white;
+  font-weight: 800;
+  font-size: xx-large;
+  align-items: center;
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+
+.box {
+  margin-top: -5rem;
+  margin-bottom: 2rem;
+}
+
+select{
+  font-size: 2rem;
+}
+
+option{
+  font-size: 2rem;
+}
+
+.buttons{
+  display: flex;
+}
+
+.selectNumberDiv{
+  margin: 2rem;
+}
+
+.selectNumberDiv > h6{
+  margin: 0;
+}
+
+.number--input{
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  width: 5rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.number--note{
+  font-size: 1.5rem;
+  color: red;
+  margin-top: 100rem;
 }

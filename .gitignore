@@ -21,3 +21,51 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+# /* const result = questions.map((current, index) => {
+#       const currentQuestion = current.question 
+#       let questionfixed = current.question
+#       let characters = [`& `, `<`, `>`, `"`, `'`]
+#       let htmlEntities = ["&amp; ", "&lsquo;", "&rsquo;", "&quot;", "&#039;"]
+  
+#       const words = currentQuestion.split(" ")
+#       for(let i = 0; i < characters.length; i++){
+#         for(let y = 0; y < words.length; y++){
+#           questionfixed = questionfixed.replace(`${htmlEntities[i]}`, `${characters[i]}`)
+#         }
+#       } 
+#       if(numberQuestions < 5 && selectedCategory === ""){
+#         setNumberQuestions(prev => prev++)
+#         return (
+#           <Question 
+#             key={index}
+#             id={index}
+#             category={current.category}
+#             correctAnswer={current.correctAnswer}
+#             answers={current.answers}
+#             difficulty={current.difficulty}
+#             question={questionfixed}
+#             selectedQuestion={current.selectedQuestion}
+#             select={select}
+#             checked={checkAnswers}
+#           />
+#         )
+#       }else if(selectedCategory===current.category){
+#         return (
+#           <Question 
+#             key={index}
+#             id={index}
+#             category={current.category}
+#             correctAnswer={current.correctAnswer}
+#             answers={current.answers}
+#             difficulty={current.difficulty}
+#             question={questionfixed}
+#             selectedQuestion={current.selectedQuestion}
+#             select={select}
+#             checked={checkAnswers}
+#           />
+#         )
+#       }
+#     }) 
+#     return result */
