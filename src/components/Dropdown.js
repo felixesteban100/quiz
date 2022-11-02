@@ -5,7 +5,7 @@ function Dropdown(props) {
     // props.selectCategory()
     return (
         <div>
-            <h6>Select the category of the questions</h6>
+            <h6 className='title-dropdown'>Select the category of the questions</h6>
             <div className='box'>
                 <select name="" id=""  onChange={(event) => props.selectCategory(event)}>
                     <option value="All">All</option>

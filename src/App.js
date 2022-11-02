@@ -343,7 +343,7 @@ function App() {
             :
             (
             <div>
-              <h2>You scored {goodAnswers}/{numberQuestions} correct answers</h2>
+              <h2 className='score-title'>You scored {goodAnswers}/{numberQuestions} correct answers</h2>
               <div className='buttons'>
                 <div onClick={reset} className='checkAnswers'>
                   Play Again 
