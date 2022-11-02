@@ -20,6 +20,7 @@ function App() {
   function reset(){
     setNewGame(prev => !prev)
     setCheckAnswers(false)
+    goToTop()
   }
 
   function home(){
@@ -134,6 +135,36 @@ function App() {
         .then(data => createQuestions(data['results']))
       break;
 
+      case "Politics":
+        fetch(`https://opentdb.com/api.php?amount=${numberQuestions}&category=24`) // 5 questions
+        .then(resp => resp.json())
+        .then(data => createQuestions(data['results']))
+      break;
+
+      case "Mythology":
+        fetch(`https://opentdb.com/api.php?amount=${numberQuestions}&category=20`) // 5 questions
+        .then(resp => resp.json())
+        .then(data => createQuestions(data['results']))
+      break;
+
+      case "Science: Computers":
+        fetch(`https://opentdb.com/api.php?amount=${numberQuestions}&category=18`) // 5 questions
+        .then(resp => resp.json())
+        .then(data => createQuestions(data['results']))
+      break;
+
+      case "Science: Mathematics":
+        fetch(`https://opentdb.com/api.php?amount=${numberQuestions}&category=19`) // 5 questions
+        .then(resp => resp.json())
+        .then(data => createQuestions(data['results']))
+      break;
+
+      case "Celebrities":
+        fetch(`https://opentdb.com/api.php?amount=${numberQuestions}&category=26`) // 5 questions
+        .then(resp => resp.json())
+        .then(data => createQuestions(data['results']))
+      break;
+
       case "All":
         fetch(`https://opentdb.com/api.php?amount=${numberQuestions}`) // 5 questions
         .then(resp => resp.json())
@@ -147,7 +178,7 @@ function App() {
 
   } ,[newGame, selectedCategory, numberQuestions])
 
-  console.log("questions: ", questions)
+  // console.log("questions: ", questions)
 
   function createQuestions(data){
     const random = Math.ceil(Math.random() * 3)
@@ -294,6 +325,13 @@ function App() {
     }
     return undefined
   }
+
+  const goToTop = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
+  };
 
   
   return (

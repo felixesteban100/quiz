@@ -127,6 +127,31 @@ function Question(props) {
                 type = "sports"
                 img = "https://cdn-icons-png.flaticon.com/512/857/857455.png"
             break;
+
+            case "Politics":
+                type = "politics"
+                img = "https://cdn-icons-png.flaticon.com/512/1651/1651652.png"
+            break;
+
+            case "Mythology":
+                type = "mythology"
+                img = "https://cdn-icons-png.flaticon.com/512/4793/4793111.png"
+            break;
+
+            case "Science: Computers":
+                type = "computers"
+                img = "https://cdn-icons-png.flaticon.com/512/1865/1865273.png"
+            break;
+
+            case "Science: Mathematics":
+                type = "mathematics"
+                img = "https://cdn-icons-png.flaticon.com/512/897/897368.png"
+            break;
+
+            case "Celebrities":
+                type = "celebrities"
+                img = "https://cdn-icons-png.flaticon.com/512/2454/2454273.png"
+            break;
             
             default:
             break;

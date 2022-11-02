@@ -7,7 +7,7 @@ function Dropdown(props) {
         <div>
             <h6 className='title-dropdown'>Select the category of the questions</h6>
             <div className='box'>
-                <select name="" id=""  onChange={(event) => props.selectCategory(event)}>
+                <select open={false} autoFocus={true} name="" id=""  onChange={(event) => props.selectCategory(event)}>
                     <option value="All">All</option>
                     <option value="Science & Nature">Science & Nature</option>
                     <option value="General Knowledge">General Knowledge</option>
@@ -26,6 +26,11 @@ function Dropdown(props) {
                     <option value="Entertainment: Film">Entertainment: Film</option>
                     <option value="Art">Art</option>
                     <option value="History">History</option>
+                    <option value="Politics">Politics</option>
+                    <option value="Mythology">Mythology</option>
+                    <option value="Science: Computers">Science: Computers</option>
+                    <option value="Science: Mathematics">Science: Mathematics</option>
+                    <option value="Celebrities">Celebrities</option>
                 </select>
             </div>
         </div>
