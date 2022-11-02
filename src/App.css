@@ -9,6 +9,7 @@ body{
   --background-answer-selected: rgb(132, 135, 225);
   --background-checkAnswer: rgb(0, 0, 107);
   --color-checkAnswer: white;
+  --text-color: black;
   
 }
 
@@ -27,9 +28,15 @@ body{
   margin: -2rem;
 }
 
+.title{
+  font-size: 7rem;
+  color: --text-color;
+}
+
 .img--main{
   height: 15rem;
 }
+
 
 .button--start{
   background-color: aqua;
@@ -49,6 +56,11 @@ body{
   font-size: 25px;
   border-radius: 15px;
 }
+
+.question--title{
+  color: var(--text-color);  
+}
+
 
 .easy{
   color: green;
@@ -71,6 +83,7 @@ body{
 
 .category > h4{
   margin-right: 20px;
+  color: var(--text-color);
 }
 
 .category--img{
@@ -90,6 +103,7 @@ body{
   text-align: center;
   cursor: pointer;
   border-radius: 15px;
+  color: var(--text-color);
 }
 
 .answer-selected{
@@ -148,6 +162,7 @@ body{
 
 select{
   font-size: 2rem;
+  width: 75%;
 }
 
 option{
@@ -178,4 +193,21 @@ option{
   font-size: 1.5rem;
   color: red;
   margin-top: 100rem;
+}
+
+@media (max-width: 600px){
+  .question--title{
+    font-size: 1.5rem;
+  }
+  
+  .answers{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+    margin: 0 auto;
+  }
+
+  .answer{
+    font-size: 1rem;
+  }
 }

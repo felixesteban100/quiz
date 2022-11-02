@@ -302,7 +302,7 @@ function App() {
         
         <div className='start'>
           <div className='start-tittle'>
-            <h1>Quizzical</h1>
+            <h1 className='title'>Quizzical</h1>
             <img src="https://cdn-icons-png.flaticon.com/512/3406/3406828.png" alt="quiz" className='img--main'/>
           </div>
           <Dropdown 
