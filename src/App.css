@@ -1,18 +1,65 @@
 body{
   margin: 0;
-  background-color: rgb(82, 102, 120);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* background-color: rgb(28, 57, 83); */
+  background: url('https://w0.peakpx.com/wallpaper/270/518/HD-wallpaper-the-wall-brick-light-night-outside-thumbnail.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: fixed;
 
   /* Variables */
-  --start-background: white;
-  --background-answer: white;
-  --background-answer-selected: rgb(132, 135, 225);
+
+  --color-header:black;
+
+  --start-background: rgb(0, 22, 48);
+  --background-answer: rgb(15, 6, 6);
+  --border-answer: white;
+  --background-answer-selected: rgb(16, 19, 114);
+  --color-answer-selected: white;
+  --background-answer-none: rgb(109, 109, 109);
+  --border-answer-none: rgb(14, 14, 14);
+  --color-answer-none: black;
+  --background-answer-good: rgb(10, 163, 43);
+  --border-answer-good: rgb(16, 65, 22);
+  --color-answer-good: black;
+  --background-answer-bad: rgb(218, 44, 44);
+  --border-answer-bad: rgb(37, 9, 9);
+  --color-answer-bad: black;
   --background-checkAnswer: rgb(0, 0, 107);
   --color-checkAnswer: white;
-  --text-color: black;
+  --text-color: rgb(236, 236, 236);
   --button-start-background: rgb(85, 85, 255);
   --button-start-color: white;
+
+
   
+  
+}
+
+.header{
+  background-color: var(--color-header);
+  padding: 1.5rem 1.5rem 1.5rem 3.5rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.header-title{
+  color: var(--text-color);
+  margin: 0 1rem 0 0;
+}
+
+.header--logo{
+  height: 2rem;
+}
+
+.started{
+  background-color: var(--start-background);
+  width: 70vw;
+  margin: 0 auto;
+  padding: 5vw;
+  font-size: 25px;
+  /* border-radius: 15px; */
 }
 
 .start{
@@ -32,7 +79,7 @@ body{
 
 .title{
   font-size: 7rem;
-  color: --text-color;
+  color: var(--text-color);
 }
 
 .img--main{
@@ -53,15 +100,6 @@ body{
   padding: 12px;
   width: 12rem;
   text-align: center;
-}
-
-.started{
-  background-color: var(--start-background);
-  width: 80vw;
-  margin: 1.5rem auto;
-  padding: 5vw;
-  font-size: 25px;
-  border-radius: 15px;
 }
 
 .question--title{
@@ -105,7 +143,7 @@ body{
 }
 
 .answer{
-  border: 1px solid gray;
+  border: 1px solid var(--border-answer);
   background-color: var(--background-answer);
   text-align: center;
   cursor: pointer;
@@ -113,34 +151,46 @@ body{
   color: var(--text-color);
 }
 
-.answer-selected{
+.answer:hover{
+  border: 1px solid var(--border-answer);
   background-color: var(--background-answer-selected);
+  color: var(--color-answer-selected);
+  text-align: center;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.answer-selected{
+  border: 1px solid var(--border-answer);
+  background-color: var(--background-answer-selected);
+  color: var(--color-answer-selected);
   text-align: center;
   cursor: pointer;
   border-radius: 15px;
 }
 
 .good--answer{
-  border: 1px solid rgb(32, 56, 16);
-  background-color: rgb(71, 244, 48);
+  border: 1px solid var(--border-answer-good);
+  background-color: var(--background-answer-good);
+  color: var(--color-answer-good);
   text-align: center;
-  cursor: pointer;
+  cursor: no-drop;
   border-radius: 15px;
 }
 
 .bad--answer{
-  border: 1px solid gray;
-  background-color: rgb(182, 69, 69);
-  color: gray;
+  border: 1px solid var(--border-answer-bad);
+  background-color: var(--background-answer-bad);
+  color: var(--color-answer-bad);
   text-align: center;
-  cursor: pointer;
+  cursor: no-drop;
   border-radius: 15px;
 }
 
 .none--answer{
-  border: 1px solid rgba(128, 128, 128, 0.726);
-  background-color: white;
-  color: gray;
+  border: 1px solid var(--border-answer-none);
+  background-color: var(--background-answer-none);
+  color: var(--color-answer-none);
   text-align: center;
   cursor: no-drop;
   border-radius: 15px;
@@ -202,7 +252,7 @@ option{
   margin-top: 100rem;
 }
 
-@media (max-width: 600px){
+@media (max-width: 1000px){
   .title{
     font-size: 3rem;
   }
@@ -258,7 +308,7 @@ option{
   }
 
   .answer-selected{
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .checkAnswers{
@@ -281,6 +331,7 @@ option{
   .score-title{
     font-size: 1.2rem;
     margin: 0 auto;
+    color: var(--text-color);
   }
 
   

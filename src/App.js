@@ -1,7 +1,8 @@
 import './App.css';
 import React from 'react'
-import Question from './components/Question'
+import Question from './components/Question';
 import Dropdown from './components/Dropdown';
+import Header from './components/Header';
 
 function App() {
   const [start, setStart] = React.useState(false);
@@ -336,6 +337,7 @@ function App() {
   
   return (
     <div className="App">
+      <Header />
       {start===false ? 
         
         <div className='start'>
@@ -347,7 +349,7 @@ function App() {
             selectCategory={selectCategory}
           />
           <div className='selectNumberDiv'>
-            <h6>How many questions: </h6>
+            <h6 className='title-dropdown'>How many questions: </h6>
             <input type="number" onChange={setNumberQ} className="number--input" placeholder='5'/>
             <h6 className='number--note'>By default are 5 questions</h6>
           </div>
