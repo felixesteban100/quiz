@@ -1,36 +1,47 @@
 import React from 'react'
-import '../App.css'
+// import '../App.css'
 
 function Question(props) {
     // console.log(props)
     const answersArr = props.answers;
 
     const answers = answersArr.map((current, index) => {
+        let answerfixed = current.answer
+        let characters = [`& `, `<`, `>`, `"`, `'`, "é"]
+        let htmlEntities = ["&amp; ", "&lsquo;", "&rsquo;", "&quot;", "&#039;", "&eacute;"]
+
+        const words = answerfixed.split(" ")
+        for (let i = 0; i < characters.length; i++) {
+          for (let y = 0; y < words.length; y++) {
+            answerfixed = answerfixed.replace(`${htmlEntities[i]}`, `${characters[i]}`)
+          }
+        }
+
         if(props.checked){
             if(current.option===true){
                 return (
-                    <div className="good--answer" key={index}>
-                        <h4>{current.answer}</h4>
+                    <div className='bg-green-700 w-fit p-2 rounded-md self-center' key={index}>
+                        <p>{answerfixed}</p>
                     </div>
                 )
             }
             else if(current.selected && current.option===false){
                 return (
-                    <div className="bad--answer" key={index}>
-                        <h4>{current.answer}</h4>
+                    <div className='bg-red-700 w-fit p-2 rounded-md self-center' key={index}>
+                        <p>{answerfixed}</p>
                     </div>
                 )
             }
             else if(current.selected===false && current.option===false)
             return (
-                <div className="none--answer" key={index}>
-                    <h4>{current.answer}</h4>
+                <div className='bg-gray-700 w-fit p-2 rounded-md self-center' key={index}>
+                    <p>{answerfixed}</p>
                 </div>
             )
         }
         return (
-            <div className={current.selected ? 'answer-selected' : 'answer'} onClick={() => props.select(props.id, index)} key={index}>
-                <h4>{current.answer}</h4>
+            <div className={current.selected ? 'bg-blue-700 hover:bg-blue-500 w-fit p-2 rounded-md self-center cursor-pointer' : 'bg-gray-500 hover:bg-gray-700 w-fit p-2 rounded-md self-center cursor-pointer'} onClick={() => props.select(props.id, index)} key={index}>
+                <p>{answerfixed}</p>
             </div>
         )
         
@@ -163,19 +174,34 @@ function Question(props) {
     }
     
 
+    function getEmote(difficulty){
+        switch(difficulty){
+            case "easy":
+                return "https://cdn-icons-png.flaticon.com/512/3285/3285462.png";
+
+            case "medium":
+                return "https://cdn-icons-png.flaticon.com/512/3285/3285623.png";
+
+            case "hard":
+                return "https://cdn-icons-png.flaticon.com/512/3285/3285432.png";
+
+            default:
+            return "";
+        }
+    }
+
     return (
-        <div className='question--box'>
-            <h4
-                className={props.difficulty}
-            >Difficulty: {props.difficulty}</h4>
-            <div className='category'>
-                <h4
-                    className={category()[0]}
-                >Category: {props.category}</h4>
-                <img src={category()[1]} alt={category()[0]} className="category--img"/>
+        <div className='bg-zinc-800 my-0 mx-auto w-4/5 flex-col pt-6 text-white text-lg p-5'>
+            <div className='flex items-center gap-2'>
+                <p className={props.difficulty}>Difficulty: {props.difficulty}</p>
+                <img className='h-10' src={getEmote(props.difficulty)} alt="" />
             </div>
-            <h2 className='question--title'>{props.question}</h2>
-            <div className='answers'>
+            <div className='w-fit flex justify-center gap-2'>
+                <p className='text-2xl self-start'>Category: {props.category}</p>
+                <img className='h-10' src={category()[1]} alt={category()[0]}/>
+            </div>
+            <p className='text-3xl mb-5'>{props.question}</p>
+            <div className=' flex justify-center flex-nowrap gap-3'>
                 {answers}
             </div>
             <br />

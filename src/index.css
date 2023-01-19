@@ -1,3 +1,17 @@
-body {
-  margin: 0;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .easy{
+        @apply text-green-400;
+    }
+
+    .medium{
+        @apply text-yellow-400;
+    }
+
+    .hard{
+        @apply text-red-400;
+    }
 }

@@ -132,10 +132,13 @@ body{
 }
 
 .answers{
+  height: fit-content;
+  width: 100%;
   display: grid;
   grid-template-columns: auto auto auto auto;
   gap: 20px;
   margin: 0 auto;
+  margin-top: 1rem;
 }
 
 .answer{
@@ -145,6 +148,7 @@ body{
   cursor: pointer;
   border-radius: 15px;
   color: var(--text-color);
+  padding: 0.5rem;
 }
 
 .answer:hover{
@@ -216,6 +220,8 @@ body{
 select{
   font-size: 2rem;
   width: 75%;
+  text-align: center;
+  border-radius: 0.5rem;
 }
 
 option{
@@ -263,7 +269,7 @@ option{
   }
 
   select{
-    font-size: 1rem;
+    font-size: 1.5rem;
     width: 75%;
   }
   
@@ -293,10 +299,7 @@ option{
   }
   
   .answers{
-    display: grid;
     grid-template-columns: auto auto;
-    gap: 10px;
-    margin: 0 auto;
   }
 
   .answer{
