@@ -20,27 +20,27 @@ function Question(props) {
         if(props.checked){
             if(current.option===true){
                 return (
-                    <div className='bg-green-700 w-fit p-2 rounded-md self-center' key={index}>
+                    <div className='bg-green-700 h-full text-center p-2 rounded-md self-center' key={index}>
                         <p>{answerfixed}</p>
                     </div>
                 )
             }
             else if(current.selected && current.option===false){
                 return (
-                    <div className='bg-red-700 w-fit p-2 rounded-md self-center' key={index}>
+                    <div className='bg-red-700 h-full text-center p-2 rounded-md self-center' key={index}>
                         <p>{answerfixed}</p>
                     </div>
                 )
             }
             else if(current.selected===false && current.option===false)
             return (
-                <div className='bg-gray-700 w-fit p-2 rounded-md self-center' key={index}>
+                <div className='bg-gray-700 h-full text-center p-2 rounded-md self-center' key={index}>
                     <p>{answerfixed}</p>
                 </div>
             )
         }
         return (
-            <div className={current.selected ? 'bg-blue-700 hover:bg-blue-500 w-fit p-2 rounded-md self-center cursor-pointer' : 'bg-gray-500 hover:bg-gray-700 w-fit p-2 rounded-md self-center cursor-pointer'} onClick={() => props.select(props.id, index)} key={index}>
+            <div className={current.selected ? 'bg-blue-700 hover:bg-blue-500 text-center max-w-sm h-full p-2 rounded-md self-center cursor-pointer' : 'bg-gray-500 hover:bg-gray-700 text-center max-w-sm h-full p-2 rounded-md self-center cursor-pointer'} onClick={() => props.select(props.id, index)} key={index}>
                 <p>{answerfixed}</p>
             </div>
         )
@@ -201,7 +201,8 @@ function Question(props) {
                 <img className='h-10' src={category()[1]} alt={category()[0]}/>
             </div>
             <p className='text-3xl mb-5'>{props.question}</p>
-            <div className=' flex justify-center flex-nowrap gap-3'>
+            {/* flex justify-center flex-nowrap gap-3 */}
+            <div className='grid grid-cols-2 gap-2 lg:grid-cols-4 '>
                 {answers}
             </div>
             <br />

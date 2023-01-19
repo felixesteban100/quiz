@@ -4,6 +4,10 @@ import Question from './components/Question';
 import Header from './components/Header';
 // import './App.css';
 
+
+// I HAVE TO MAKE IT RESPONSIVE WITH TAILWIND CSS
+
+
 function App() {
   const [start, setStart] = React.useState(false);
   const [questions, setQuestions] = React.useState([])
@@ -341,7 +345,8 @@ function App() {
           <img className='h-40 my-8 mx-auto' src="https://cdn-icons-png.flaticon.com/512/6193/6193558.png" alt="quiz" />
           <div className='w-4/5 mx-auto flex flex-col gap-5 text-white text-3xl'>
             <p className='self-center'>Select the category of the questions</p>
-            <select className='text-black rounded-md text-center w-fit p-2 text-lg self-center' open={false} autoFocus={true} name="" id="" onChange={(event) => selectCategory(event)}>
+            {/* text-black rounded-md text-center w-fit pt-2 pb-3 text-lg self-center text-1 */}
+            <select className='form-select text-black rounded-md text-center' open={false} autoFocus={true} name="" id="" onChange={(event) => selectCategory(event)}>
                 <option value="All">All</option>
                 <option value="Science & Nature">Science & Nature</option>
                 <option value="General Knowledge">General Knowledge</option>
