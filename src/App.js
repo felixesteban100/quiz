@@ -391,7 +391,7 @@ function App() {
             </div> */}
           </div>
           :
-          <div className='text-white bg-black pb-5'>
+          <div className='text-white pb-5'>
             {infoquestions()}
             {!checkAnswers
               ?
