@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer components{
+    body{
+        @apply bg-zinc-800;
+    }
+
     .easy{
         @apply text-green-400;
     }

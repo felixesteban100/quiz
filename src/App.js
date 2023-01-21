@@ -337,7 +337,7 @@ function App() {
 
 
   return (
-    <div className='bg-black h-screen'>
+    <div className=' h-full'>
       <Header />
       {start === false ?
         <div className='bg-zinc-800 my-0 mx-auto w-4/5 flex-col pt-6 pb-8 rounded-xl'>
