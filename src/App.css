@@ -35,7 +35,7 @@ body{
   --button-start-background: rgb(85, 85, 255);
   --button-start-color: white;
 }
-
+/* 
 .header{
   background-color: var(--color-header);
   padding: 1.5rem 1.5rem 1.5rem 3.5rem;
@@ -59,7 +59,6 @@ body{
   margin: 0 auto;
   padding: 5vw;
   font-size: 25px;
-  /* border-radius: 15px; */
 }
 
 .start{
@@ -212,10 +211,6 @@ body{
 }
 
 
-/* .box {
-  margin-top: -5rem;
-  margin-bottom: 2rem;
-} */
 
 select{
   font-size: 2rem;
@@ -261,7 +256,6 @@ option{
 
   .title-dropdown{
     font-size: 1.5rem;
-    /* margin-bottom: 4rem; */
   }
 
   .selectNumberDiv > h6{
@@ -334,4 +328,4 @@ option{
   }
 
   
-}
+} */

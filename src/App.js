@@ -346,7 +346,7 @@ function App() {
           <div className='w-4/5 mx-auto flex flex-col gap-5 text-white text-3xl'>
             <p className='self-center'>Select the category of the questions</p>
             {/* text-black rounded-md text-center w-fit pt-2 pb-3 text-lg self-center text-1 */}
-            <select className='form-select text-black rounded-md text-center' open={false} autoFocus={true} name="" id="" onChange={(event) => selectCategory(event)}>
+            <select className='form-select text-black rounded-md text-center w-full' open={false} autoFocus={true} name="" id="" onChange={(event) => selectCategory(event)}>
                 <option value="All">All</option>
                 <option value="Science & Nature">Science & Nature</option>
                 <option value="General Knowledge">General Knowledge</option>
@@ -372,8 +372,8 @@ function App() {
                 <option value="Celebrities">Celebrities</option>
             </select>
             <p className='w-fit self-center'>How many questions: </p>
-            <input className='text-black rounded-md text-center w-fit p-2 text-lg self-center' type="number" onChange={setNumberQ} placeholder='5' />
-            <p className='w-fit self-center'>By default are 5 questions</p>
+            <input className='text-black rounded-md text-center p-2 text-lg self-center w-full' type="number" onChange={setNumberQ} placeholder='5' min={1} />
+            {/* <p className='w-fit self-center'>By default are 5 questions</p> */}
             <div className='bg-blue-500 hover:bg-blue-700 w-fit p-2 rounded-md self-center cursor-pointer' onClick={startNew}>Start</div>
           </div>
         </div>
